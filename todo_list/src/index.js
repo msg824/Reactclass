@@ -8,7 +8,7 @@ import MomentUtils from '@date-io/moment';
 import moment from 'moment';
 import 'moment/locale/ko';
 
-moment.locale('ko')
+moment.locale('ko');
 
 ReactDOM.render(
   <MuiPickersUtilsProvider utils={MomentUtils}>
