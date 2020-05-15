@@ -30,31 +30,43 @@ class App extends React.Component {
     }
 
     onChangeStartDate(e) {
+        const momentDate = moment(e._d).format('llll');
+        const setDate = momentDate.split(' ');
         this.setState({
-            startDate: moment(e._d).format('llll')
+            startDate: `${setDate[0]} ${setDate[1]} ${setDate[2]}`
         })
     }
 
     onChangeEndDate(e) {
+        const momentDate = moment(e._d).format('llll');
+        const setDate = momentDate.split(' ');
         this.setState({
-            endDate: moment(e._d).format('llll')
+            endDate: `${setDate[0]} ${setDate[1]} ${setDate[2]}`
         })
     }
 
     onChangeStartTime(e) {
+        const momentDate = moment(e._d).format('llll');
+        const setDate = momentDate.split(' ');
         this.setState({
-            startTime: moment(e._d).format('llll')
+            startTime: `${setDate[4]} ${setDate[5]}`
         })
     }
 
     onChangeEndTime(e) {
+        const momentDate = moment(e._d).format('llll');
+        const setDate = momentDate.split(' ');
         this.setState({
-            endTime: moment(e._d).format('llll')
+            startTime: `${setDate[4]} ${setDate[5]}`
         })
     }
 
     render() {
         const { title, content } = this.state;
+        console.log(this.state.startDate)
+        console.log(this.state.endDate)
+        console.log(this.state.startTime)
+        console.log(this.state.endTime)
 
         return (
             <div className="App">
